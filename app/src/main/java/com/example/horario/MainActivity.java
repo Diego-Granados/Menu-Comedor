@@ -4,13 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Calendar;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CalendarView;
-import android.widget.Toast;
-
-import java.text.SimpleDateFormat;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -51,21 +49,10 @@ public class MainActivity extends AppCompatActivity {
         dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK) - 1;
         dateString = daysOfWeek[dayOfWeek] + " " + calendar.get(Calendar.DAY_OF_MONTH) + " de " +
                 months[calendar.get(Calendar.MONTH)] + " del " + calendar.get(Calendar.YEAR);
-        Toast.makeText(this, dateString, Toast.LENGTH_LONG).show();
 
+        Intent i = new Intent(this, Comidas.class);
+        i.putExtra("dateString", dateString);
+        i.putExtra("weekDay", dayOfWeek);
+        startActivity(i);
     }
-    public void setDate(int day, int month, int year){
-        calendar.set(Calendar.YEAR, year);
-        calendar.set(Calendar.MONTH, month - 1);
-        calendar.set(Calendar.DAY_OF_MONTH, day);
-        long milli = calendar.getTimeInMillis();
-        calendarView.setDate(milli);
-    }
-
-    public void getDate(){
-        long date = calendarView.getDate();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yy", Locale.getDefault());
-        calendar.setTimeInMillis(date);
-        String selected_date = simpleDateFormat.format(calendar.getTime());
-    };
 }

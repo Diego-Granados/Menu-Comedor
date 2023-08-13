@@ -27,7 +27,7 @@ public class Comidas extends AppCompatActivity {
         tvCena = (TextView) findViewById(R.id.cenaText);
         horarios = new String[7][4];
         llenarHorarios();
-        llenarText(Integer.valueOf(getIntent().getStringExtra("weekDay")),getIntent().getStringExtra("dateString"));
+        llenarText(getIntent().getIntExtra("weekDay", 0),getIntent().getStringExtra("dateString"));
     }
 
     private void llenarHorarios(){

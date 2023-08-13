@@ -22,7 +22,7 @@
         android:layout_width="348dp"
         android:layout_height="93dp"
         android:layout_marginTop="176dp"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="sans-serif-light"
         android:text="@string/calendarioText"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
@@ -30,20 +30,37 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/button_background_color"
         android:onClick="consultarFecha"
         android:text="@string/calendarButton"
         android:textColorHighlight="#202F81"
         android:textColorLink="#3F51B5"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/comedor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/calendarioText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.304" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
