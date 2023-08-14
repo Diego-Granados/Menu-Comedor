@@ -2,5 +2,5 @@
     <string name="app_name">Horario</string>
     <string name="calendarioText">Seleccione el día que desea consultar</string>
     <string name="calendarButton">Consultar</string>
-    <string name="comedor">Comedor institucional</string>
+    <string name="comedor">Comedor Institucional</string>
 </resources>
