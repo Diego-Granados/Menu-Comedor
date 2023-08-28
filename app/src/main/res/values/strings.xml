@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Horario</string>
     <string name="calendarioText">Seleccione el día que desea consultar</string>
+    <string name="restauranteText">Restaurante:</string>
     <string name="calendarButton">Consultar</string>
     <string name="comedor">Comedor Institucional</string>
+    <string name="select">Select Item</string>
+    <string name="ubicacionButton">Ver ubicación</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
