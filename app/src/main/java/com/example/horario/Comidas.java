@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -108,6 +109,7 @@ public class Comidas extends AppCompatActivity {
                 "Fresco", "Queque de zanahoria", "Chifrijo"};
 
         restHorarios.put("Restaurante Institucional", horarios);
+        restHorarios.put("Comedor Estudiantil", horarios);
 
         horarios = new String[7][4];
         horarios[0] = new String[]{"Incluye: pinto, huevo al gusto,\nplátano maduro, pan, café/té/fresco\n" +
@@ -147,6 +149,7 @@ public class Comidas extends AppCompatActivity {
                 "Repostería y helados", "No hay"};
 
         restHorarios.put("Soda La Deportiva", horarios);
+        restHorarios.put("Soda El Lago", horarios);
 
         horarios = new String[7][4];
         horarios[0] = new String[]{"Incluye: pinto, pan, café/fresco\n" +
@@ -222,6 +225,7 @@ public class Comidas extends AppCompatActivity {
 
     public void ubicacion(View view){
         Intent i = new Intent(this, MapsActivity.class);
+        i.putExtra("restaurante", restaurante);
         startActivity(i);
     }
 }

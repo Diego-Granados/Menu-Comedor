@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
     String dateString;
 
-    String[] item = {"Restaurante Institucional", "Soda La Deportiva", "La Casita Forestal"};
+    String[] item = {"Restaurante Institucional", "Soda La Deportiva", "La Casita Forestal",
+            "Soda El Lago", "Comedor Estudiantil"};
 
     AutoCompleteTextView autoCompleteTextView;
 
@@ -67,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 restaurante = adapterView.getItemAtPosition(position).toString();
-                Toast.makeText(MainActivity.this, "item " + restaurante, Toast.LENGTH_SHORT).show();
             }
         });
     }
